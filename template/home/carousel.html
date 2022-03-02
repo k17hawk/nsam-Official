@@ -1,0 +1,17 @@
+<div style="margin-top: 66px;"class="flexslider left">
+  <ul class="slides">
+    {%for i in slideimage%}
+    <li>
+      <img class="d-block w-100"src="/media/{{i.image}}">
+      <div class="meta">
+        <h1 class="head-font">{{i.Heading}}</h1>
+        <h2 class="head-font">{{i.description}}</h2>
+        <div class="category">
+          
+        </div>
+      </div>
+    </li>
+    {%endfor%}
+   
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+{%extends 'index.html'%}
+  {% block body %}
+
+    {%load static%}
+    <style>
+     #navcontainer
+     {
+    background: url({%static 'img/blog.jpg'%}) no-repeat center center/cover;
+   }
+    </style>
+   <div style="background-position: center top;" id="navcontainer">  
+
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">ABOUT US</h2> 
+                </div> 
+        
+
+    </div>
+
+   <div id="main-container">
+  <div class="col-md-12 col-sm-12">
+
+        <h2 class="headmy">ABOUT US</h2> 
+        <hr/>
+   
+    <h5 style="color: #2720a9;" class="text-justify">
+      Nepal Student Association of Microbiology(NSAM) is a non-profit, non-governmental organization lead by youths. It is located at Central Campus of Technology, Dharan.  It is established  as a research thought hub in eastern Nepal. It was officially registered as an NGO in District adminstrative office, sunsari (3058/075/076) in 2019.<br/> With all the action plans of youth empowerment & mobilzation, and nature conservation being centralized wihin the capital of the country; NSAM have tried a break through for building innovative researchers and create an environment for doing hardcore research in the eastern part of the country.<br/> Apart from conservation and research in biodiversity, NSAM is also involved in promoting livelihood on community through conservation, building leadership, health checkup program,formulating conservation policy, developing multi-stakeholder partnership promoting leadership and building future generation as wildlife researcher & conservation biologist with a joint effort with Nepal government, other NGOs, INGOs and all the responsible stakeholders. We mainly focus on Youth and we believe we can change the scenario to conserve the wildlife and the perception towdards it.<br/> Location: Central Campus Of technology,Hattisar Dharan<br/> Mob no:+9779814313020<br/> info@npnsam.org<br/>
+    </h5>
+  </div>
+{%include "footer.html" %}
+</div>
+   {% endblock %}

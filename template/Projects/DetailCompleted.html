@@ -1,0 +1,30 @@
+{%extends 'index.html'%}
+  {% block body %}
+  <style type="text/css">
+  .mb-1{
+  	color: #1e16ad;
+  }
+  </style>
+  
+<div style="margin-top: 149px;"class="col-sm-12 col-md-12">
+
+	<h3 class="heading1 text-justify margin-set">{{details.Heading}}</h3>
+	
+     <img class="bd-placeholder1-img" width="200" height="250" src="/media/{{details.Picture}}"
+      preserveAspectRatio="xMidYMid slice" />
+       <div class="mb-1">{{details.date_And_time  |date:'M'}} {{details.date_And_time.year}}</div>
+         
+        <div class="mb-1 ">Project Leader : {{details.Project_Leader}}</div>
+         <div class="mb-1 ">Location : {{details.Location}}</div>
+          <div class="mb-1 ">Funding Agency : {{details.Funding_Agency}}</div>
+          <p class="mine-paragraph text-justify margin-set">{{details.Description | safe}}</p> 
+        
+          
+        
+
+
+</div>
+
+  {%include 'footer.html'%}
+
+{% endblock %}

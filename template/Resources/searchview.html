@@ -1,0 +1,13 @@
+{% if report %}
+    
+        {% for report in report %}
+        <div  style= "margin-top: 15px;" class="col-sm-6 col-md-6">
+        <a href="{{ report.file.url }}" download>{{ report.Heading }} ({{report.date|date:'M'}} -{{report.date.day}}-{{report.date.year}}) <i class="fa fa-download" ></i></a><br/>
+      </div>
+        {% endfor %}
+        
+    
+{% else %}
+    <p>No report found.</p>
+{% endif %}
+

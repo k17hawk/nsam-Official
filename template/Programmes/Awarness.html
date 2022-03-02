@@ -1,0 +1,50 @@
+{%extends 'index.html'%}
+  {% block body %}
+    {%load static%}
+
+  <style type="text/css">
+   
+             #navcontainer
+{
+                       
+   background: url({%static 'img/awarness.JPG'%}) no-repeat center center/cover;
+   
+}
+  </style>
+
+<div style="background-position: center top;" id="navcontainer">
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">Education and AWARNESS</h2> 
+                </div> 
+
+ </div>
+  <div id="main-container">
+    {% if aware %}
+  <div class="col-sm-12 col-md-12">
+      {% for i in aware%}
+       <h3 class="headmy"> {{i.title  }}</h3>
+          {%if i.picture%}
+          <img class="bd-placeholder1-img" width="200" height="250" src="/media/{{i.picture}}" preserveAspectRatio="xMidYMid slice" />
+      {%endif%}
+      
+            
+         
+                 
+                <div class="col-sm-12" >
+                  <div style="overflow:hidden;justify-content: left;" class="limit">
+                    
+                 <p class="text-justify"> {{i.description | safe }}
+                   </p>
+                 </div>
+               </div>
+                      
+
+       {% endfor %}
+     </div>
+      
+    {% endif %}
+  
+{%include "footer.html" %}
+</div>
+   {% endblock %}

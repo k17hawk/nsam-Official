@@ -1,0 +1,61 @@
+{%extends 'index.html'%}
+  {% block body %}
+    {%load static%}
+  <style>
+ 
+   #navcontainer
+     {
+    background: url({%static 'img/blog.jpg'%}) no-repeat center center/cover;
+   }
+
+
+
+  </style>
+  {%load static%}
+
+ 
+<div style="background-position: center top;" id="navcontainer">
+
+
+              <div class="backgr-text"> 
+              
+                    <h2 class="head-part">OUR DONARS & PARTNERS</h2> 
+                </div> 
+        
+
+    </div>
+
+ <div id="main-container">
+<div class="col-sm-12 col-md-12">
+<h1 class="headmy">OUR DONARS & PARTNERS</h1>
+  <hr/>
+
+  <main class="main">
+  <div class="container2">
+       
+       {%for j in donars%}
+    <div class="card1">
+      <div class="card-image">
+        <a href="/media/{{j.image}}" data-fancybox="gallery">
+          <img class="img-1"src="/media/{{j.image}}" alt="Image Gallery">
+        </a>
+      </div>
+    </div>
+     {%endfor%}  
+   
+    
+  </div>
+</main>
+</div>
+
+
+<br/>
+
+ {%include 'footer.html'%}
+ </div>
+ 
+<script type="text/javascript">
+
+</script>
+
+ {% endblock %}

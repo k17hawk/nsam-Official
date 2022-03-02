@@ -1,0 +1,102 @@
+{%extends 'index.html'%}
+  {% block body %}
+    {%load static%}
+  <style type="text/css">
+   #navcontainer
+     {
+    background: url({%static 'img/pangolin.jpg'%}) no-repeat center center/cover;
+   }
+ 
+  </style>
+
+<div style="background-position: center top;" id="navcontainer"> 
+
+
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">PROJECT</h2> 
+                </div> 
+      
+
+    </div>
+ <div id="main-container">
+  <div style="margin-top: 45px;" class="col-md-12 col-sm-12">
+    <center class="for-btn">
+       <a  id= "allproject"class="btn  menu active">ALL</a>
+      
+      <a  id= "ongoingproject"class="btn menu ">Ongoing</a>
+   
+  
+      <a  id= "completedproject"class="btn  menu">Completed</a>
+
+ </center>
+ <br/>
+
+<div id ="allinone"class="row">
+{%if completed %}
+<!-- EFFECT 6-->
+{%for i in completed %}
+<div class="figure effect-6">
+  
+    <img src="/media/{{i.Picture}}" alt="img12" />
+    <div class="figcaption">
+        <div class="headmy">
+          <a href="{% url 'movetoproject:detailcompleted' i.Id %}">  <h2 >Completed</h2></a>
+
+           <a href="{% url 'movetoproject:detailcompleted' i.Id %}"> <p>{{i.Heading}}</p> </a>
+
+        </div>
+    </div>
+</div>
+{%endfor%}
+{%endif%}
+<br/>
+
+{%if ongoing%}
+{%for j in ongoing%}
+<div class="figure effect-10">
+      
+    <img src="/media/{{j.Picture}}" alt="img12" />
+
+    <div class="figcaption">
+        <div>
+          <a href="{% url 'movetoproject:detailongoing' j.Id %}">  <h2>Ongoing</h2></a>
+              <a href="{% url 'movetoproject:detailongoing' j.Id %}">    <p>{{j.Heading}}</p></a>
+
+        </div>
+    </div>
+</div>
+</div>
+{%endfor%}
+{%endif%}
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+  $('.for-btn a').click(function(){
+    $('.for-btn a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+
+
+
+$('#allproject').click(function() {
+  $('#allinone').html(' {%if completed %}{%for i in completed %}<div class="figure effect-6"><img src="/media/{{i.Picture}}" alt="img12" /><div class="figcaption"><div> <a href="{% url 'movetoproject:detailcompleted' i.Id %}"><h2>Completed</h2></a> <a href="{% url 'movetoproject:detailcompleted' i.Id %}"><p>{{i.Heading}}</p></a> </div></div></div>{%endfor%}{%endif%}<br/>{%if ongoing%}{%for j in ongoing%}<div class="figure effect-10"><img src="/media/{{j.Picture}}" alt="img12" /><div class="figcaption"><div><h2>Ongoing</h2><p>{{j.Heading}}</p></div></div></div></div>{%endfor%}{%endif%}');
+
+});
+
+$('#ongoingproject').click(function() {
+   $('#allinone').html('{%if ongoing%}{%for j in ongoing%}<div class="figure effect-10"><img src="/media/{{j.Picture}}" alt="img12" /><div class="figcaption"><div><a href="{% url 'movetoproject:detailongoing' j.Id %}"><h2>Ongoing</h2></a><a href="{% url 'movetoproject:detailongoing' j.Id %}"><p>{{j.Heading}}</p></a></div></div></div></div>{%endfor%}{%endif%}');
+});
+
+
+$('#completedproject').click(function() {
+  $('#allinone').html(' {%if completed %}{%for i in completed %}<div class="figure effect-6"><img src="/media/{{i.Picture}}" alt="img12" /><div class="figcaption"><div> <a href="{% url 'movetoproject:detailcompleted' i.Id %}"><h2>Completed</h2></a> <a href="{% url 'movetoproject:detailcompleted' i.Id %}"><p>{{i.Heading}}</p> </a></div></div></div>{%endfor%}{%endif%}<br/>');
+
+});
+
+
+</script>
+{%include "footer.html" %}
+</div>
+   {% endblock %}

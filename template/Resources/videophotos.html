@@ -1,0 +1,112 @@
+{%extends 'index.html'%}
+  {% block body %}
+  {%load static%}
+<style >
+    #navcontainer
+{
+                             
+   background: url({%static 'img/photos.jpg'%}) no-repeat center center /cover;
+}
+
+
+</style>
+<div id="navcontainer" >  
+
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">Videos and photos</h2> 
+                </div> 
+     
+</div>
+
+{% if image %}
+<div id="main-container">
+<hr/>
+
+  <h1>OUR PHOTOS</h1>
+<hr/>
+
+
+
+
+  <main class="col-sm-12 col-md-12">
+  <div class="container2">
+
+       {%for i in title%}
+       {%for j in image%}
+    <div class="card1">
+      <div class="card-image">
+        <a href="/media/{{j.image}}" data-fancybox="gallery"data-caption="{{i.title}}">
+          <img class="img-1"src="/media/{{j.image}}" alt="Image Gallery">
+        </a>
+      </div>
+    </div>
+     {%endfor%}  
+     {%endfor%}
+    
+  </div>
+</main>
+{%endif%}
+{% load embed_video_tags %}
+
+
+
+<div class="col-md-12 col-sm-12">
+  
+  <h1>NSAM TV</h1>
+  <hr/>
+
+{% if Videos%}
+
+  
+  
+    <div class="gallery">
+       {%for myvideo in Videos%}
+  <div class="single-video">
+    <figure>
+    {% video myvideo.video as my_video %}
+    {% video my_video  %}
+     {% endvideo %}
+ </figure>
+</div>
+  {%endfor%}
+</div>
+ 
+ 
+    
+  
+
+
+{%endif%}
+
+
+
+	</div>
+  {%include 'footer.html'%}
+  </div>
+
+
+<script type="text/javascript">
+
+
+ $('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  loop: false,
+  protect: true
+});
+</script>
+
+
+
+
+
+
+
+  {% endblock%}

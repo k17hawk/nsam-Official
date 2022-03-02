@@ -1,0 +1,104 @@
+{%extends 'index.html'%}
+  {% block body %}
+   {%load static%}
+  <style>
+  #navcontainer
+{
+                       
+   background: url({%static 'img/aboutus.jpg'%}) no-repeat center center/cover;
+   
+}
+		</style>  
+    <div style="background-position: center top;" id="navcontainer">
+    
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">Blogs</h2> 
+                </div> 
+        
+
+    </div>
+
+   <div id="main-container">
+    <div class="col-sm-12 col-md-12">
+    <div class="row">
+    <div class="col-sm-12 col-md-7">
+        <div class="content-mine">
+         <h3 class="headmy ">BLOGS</h3>
+         <hr/>
+         {%for i in research%}
+           <h3 class="heading text-justify margin-set1">{{i.title}}</h3>
+   	        {%if i.image%}
+          <img class="bd-placeholder1-img" width="200" height="250" src="/media/{{i.image}}" preserveAspectRatio="xMidYMid slice" />
+          {%endif%}
+        
+         <small class="margin-set1">{{i.date|date:'M'}} -{{i.date.day}}-{{i.date.year}}</small>
+          <p class="mine-paragraph text-justify margin-set1">{{i.description |slice:":1150" |safe}}... </p> 
+          <a href="{% url 'movetoblog:blogsdetail' i.sno %}" class="click-button margin-set1">Continue reading</a>
+          <br/>
+          <hr/>
+          <br/>
+          {%endfor%}
+        </div>
+   </div>
+    {%if research%}
+  <div class="col-md-5 col-sm-12">
+     <div class="list-of">
+                  <h3 class="notify-post">Recent Blogs</h3>
+               <hr class="seperator-list"/>
+               
+               {%for i in research.all|slice:"0:4"%}
+              
+                    <div class="sidebar-content">
+                        <h5 class="animated bounceInRight text-justify">
+                          <i class="fa fa-chevron-right"></i>
+                          <a href="{% url 'movetoblog:blogsdetail' i.sno %}" >{{i.title}}</a></h5>
+                    </div>
+              <hr class="end-sep"/>
+                     {%endfor%}
+                    <hr/>
+                         
+                
+
+                  <h3 class="notify-post">Archives</h3>
+                  <hr class="seperator-list"/>
+                   {%for i in research%}
+               
+                    <div class="sidebar-content">
+                        <h5 class="animated bounceInRight text-justify">
+                          <i class="fa fa-chevron-right"></i>
+                         <span class="time" >
+                          <i class="fa fa-clock-o">  
+                          <a href="{% url 'movetoblog:blogsdetail' i.sno %}">
+                         {{i.date|date:'M'}} -{{i.date.day}}-{{i.date.year}}</a>
+                       </i>
+                     </span>
+                          </h5>
+                    </div><!-- .Sidebar-thumb -->
+                  
+                    <hr class="end-sep"/>
+                     {%endfor%}
+                     <hr class="seperator-list"/>
+                </div>
+                
+                  
+
+                
+
+  </div>
+{%endif%}
+</div>
+</div>
+
+
+<br/>
+<br/>
+ 
+          {%include 'footer.html'%}
+        </div>
+
+
+
+
+  
+{% endblock %}

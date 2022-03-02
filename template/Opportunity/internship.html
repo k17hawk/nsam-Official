@@ -1,0 +1,84 @@
+{%extends 'index.html'%}
+  {% block body %}
+  {%load static%}
+<style>
+        #navcontainer
+{
+                       
+   background: url({%static 'img/membership.jpg'%}) no-repeat center center/cover;
+   
+}
+
+</style>
+<div style="background-position: center top;" id="navcontainer">
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">MEMBERSHIP</h2> 
+                </div> 
+        
+  </div>
+  <br/>
+  <div id="main-container">
+  <div class="col-md-12 col-sm-12">
+    <center>
+      <h3 class="headmy ">MEMBERSHIP</h3>
+  <hr/>
+   <table>
+  <thead>
+    <tr>
+      <th id="Type" >TYPE</th>
+      <th id="Duration" >DURATION</th>
+      <th id="Fee" >FEE (NPR)</th>
+      <th id="Process" >PROCESS</th>
+      <th id="Service" >SERVICE</th>
+      <th id="Contact@" >CONTACT MAIL</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr>
+      <td headers="Type" data-title="Type">General Membership<br/> (Tribhuvan University)</td>
+      <td headers="Duration" data-title="Duration">One year </td>
+      <td headers="Fee" data-title="Fee">RS 350</td>
+      <td headers="Process" data-title="Process">Board members 
+        <br/>will conject
+      <br/> after receiving 
+      <br/>application</td>
+      <td headers="Service" data-title="Service">Digital newsletter from <br/> the organization,<br/>
+                                             bird watching </td>
+      <td headers="Contact@" data-title="Contact@">info@npnsam.org</td>
+    </tr>
+
+    <tr>
+      <td headers="Type" data-title="Type">Lifetime Membership<br/> (Tribhuvan University)</td>
+      <td headers="Duration" data-title="Duration"> three years </td>
+      <td headers="Fee" data-title="Fee">RS 450</td>
+      <td headers="Process" data-title="Process">
+            Board members 
+        <br/>will conject
+      <br/> after receiving 
+      <br/>application</td>
+      <td headers="Service" data-title="Service">Digital newsletter from <br/> the organization,<br/>
+                                             bird watching </td>
+      <td headers="Contact@" data-title="Contact@">info@npnsam.org</td>
+    </tr>
+    
+    
+    
+  </tbody>
+</table>
+</center>
+
+
+
+
+
+
+<br/>
+
+
+
+  </div>
+{%include "footer.html" %}
+</div>
+   {% endblock %}

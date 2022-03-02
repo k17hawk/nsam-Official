@@ -1,0 +1,49 @@
+{%extends 'index.html'%}
+  {% block body %}
+    {%load static%}
+  <style type="text/css">
+      #navcontainer
+     {
+    background: url({%static 'img/pangolin.jpg'%}) no-repeat center center/cover;
+   }
+
+  </style>
+
+
+<div style="background-position: center top;" id="navcontainer">
+
+            
+
+              <div class="backgr-text"> 
+              
+                    <h2 class="head-part">ONGOING</h2> 
+                </div> 
+ </div>
+  <div id="main-container">
+<div style="margin-top: 45px;" class="col-sm-12 col-md-12">
+  <h1 class="headmy">Ongoing Project</h1>
+  <hr/>
+  {%if ongoing%}
+  <ul class="cards5">
+    {%for t in ongoing%}
+    <li class="cards_item5">
+      <div class="card5">
+        <div class="card_image5">
+          <img class="my_img" src="/media/{{t.Picture}}"></div>
+        <div class="card_content5">
+          <h2 class="card_title5">{{t.Heading |slice:":150"}}</h2>
+          <p class="card_text5">{{t.Description |slice:":150"  |safe }}...</p>
+          <a href="{% url 'movetoproject:detailongoing' t.Id %}"class="btn5 card_btn5">Discover More</a>
+        </div>
+      </div>
+    </li>
+
+ {%endfor%}
+  </ul>
+ {%endif%}
+</div>
+
+
+{%include "footer.html" %}
+</div>
+   {% endblock %}

@@ -1,0 +1,141 @@
+
+            .backgr-text { 
+                position: absolute; 
+                top: 25%; 
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                text-align: center; 
+                color: #3830c7;
+            } 
+            .head-part{
+            	    font-weight: 600;
+				    font-family: serif;
+				    font-variant: all-petite-caps;
+            }
+        
+				   .bd-placeholder1-img {
+				       width: 100%;
+					    max-width: 827px;
+					    height: 440px;
+					    /* margin-right: 57px; */
+					    
+				}
+				.col-auto{
+					    margin-top: 45px;
+				}
+				.text-1{
+					    margin-top: 48px;
+					    font-size: xx-large;
+					    font-weight: 600;
+					   
+					    color: #3830c7;
+				}
+
+
+th{
+    border: 1px solid black;
+  }
+
+  
+
+/* just some styling */
+
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0 .3em;
+  white-space: nowrap;
+}
+
+td {
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+  @media(max-width: 568px){
+        .bd-placeholder-img {
+    width: 100%;
+    max-width: 1301px;
+    height: 244px;
+}
+
+#mt-blog{
+  margin-top: 26px;
+}
+.bd-placeholder1-img {
+    width: 100%;
+    max-width: 827px;
+    height: 161px;
+   
+}
+th{
+    border: 1px solid black;
+  }
+  thead {
+    position: absolute;
+    left: -9999px;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    
+  } 
+  
+  tr, td, th, thead, tbody, table {
+    display: block;
+  }
+  
+
+  tbody tr td::before {
+    display: inline-block;
+    width: 25%;
+    min-width: 100px;
+    border-right: 2px dotted #999;
+    margin-right: 10px;
+    font-weight: bold;
+    
+  } 
+    table {
+    border: 0;
+  }
+  tbody tr td::before {
+    content: attr(data-title);
+  }
+
+}

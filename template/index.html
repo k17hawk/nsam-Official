@@ -1,0 +1,209 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+ 
+    <title>NSAM | EMPOWERING-YOUTHS</title>
+
+    
+       {% include "loader.html" %}
+    <!-- Bootstrap core CSS -->
+
+
+    <style>
+     
+      .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav5{
+  margin-left: -67px;
+}
+.navbar-toggler {
+  border-color: rgb(49,41,191);
+} 
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+ 
+
+   .menu1{
+    color: black;
+   }
+   .active{
+  background: blue;
+}
+@media (min-width: 1152px)
+{
+.navbar-expand-md .navbar-collapse {
+    
+    display: flex !important;
+  
+    flex-basis: auto;
+}
+}
+ 
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media(max-width: 1152px){
+   .navbar-nav {
+    
+    display: inline;
+   }
+   .naving{
+    margin-left: -31px;
+   }
+   .nav2{
+    margin-left: 0px;
+   }
+    .nav3{
+    margin-left: 0px;
+   }
+    .nav4{
+    margin-left: 0px;
+   }
+   .nav5{
+    margin-left: 0px;
+   }
+   
+   }
+   @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(255,255,255);
+}
+
+
+
+    </style>
+    <!-- Custom styles for this template -->
+    
+  </head>
+  <body>
+    <div class="loader"></div>
+    <header>
+        {%load static%}
+  <nav  style="background-color: #ffffff !important;"class="navbar navbar-expand-md fixed-top ">
+      <a href="#" class="navbar-brand">
+            <img src="{% static 'img/bann1.png' %}" style="max-width: 100%;height: 83px;"class="img-fluid"> 
+        </a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+     
+<div class="collapse navbar-collapse" id="navbarCollapse">
+            <div   class="navbar-nav parentMenu">
+            
+              <li>
+              <a href="{% url 'movetohome:home' %}" id ="applied"class="nav-item nav-link actve menu1  ">Home</a>
+            </li>
+          
+            <li>
+                <a href="{% url 'movetoblog:blogs' %}" id ="applied" class="nav-item nav-link menu1">Blogs</a>
+              </li>
+              <li>
+                <a href="{% url 'movetoevent:event' %}" id ="applied" class="nav-item nav-link menu1 ">News/Events</a>
+                </li>
+            <div id="submenu" class="naving">
+                <li>
+                    <a  class="menu1">Opportunity</a>
+                        <ul class="sub-nav">
+                            <li><a class="menu1 "  href="{% url 'movetooppo:Volunteer' %}">Volunteer</a></li>
+                            <li><a class="menu1" href="{% url 'movetooppo:Membership' %}">Membership</a></li>
+                            
+                        </ul>
+                 </li>
+             
+ 
+            </div>
+               <div id="submenu" class="nav1">
+                <li>
+                    <a class="menu1"  >Resources</a>
+                        <ul class="sub-nav1">
+                            <li><a class="menu1"   href="{% url 'movetoresource:Videos&photos' %}">Videos/Photos</a></li>
+                            <li><a class="menu1"  href="{% url 'movetoresource:brouchers' %}">Brochure/Posters</a></li>
+                            <li><a class="menu1"  href="{% url 'movetoresource:report' %}">Report</a></li>
+                        </ul>
+                 </li>
+             
+
+            </div>
+            <div id="submenu" class="nav2">
+                <li>
+                    <a class="menu1" >Programmes</a>
+                        <ul class="sub-nav2">
+                            <li><a class="menu1"  href="{% url 'movetoprogram:publichealth' %}">Public Health</a></li>
+                            <li><a class="menu1"  href="{% url 'movetoprogram:publicawarness' %}">Education & awarness</a></li>
+                            <li><a class="menu1" href="{% url 'movetoprogram:workshop' %}">Workshop</a></li>
+                            <li><a class="menu1" href="{% url 'movetoprogram:wildlife' %}">Wildlife</a></li>
+                        </ul>
+                 </li>
+             
+
+            </div>
+              <div id="submenu" class="nav3">
+                <li>
+                    <a  class="menu1" href="{% url 'movetoproject:projects' %}">Projects</a>
+                        <ul class="sub-nav3">
+                          
+                            <li><a class="menu1"  href="{% url 'movetoproject:completed' %}">Completed</a></li>
+                            <li><a class="menu1"   href="{% url 'movetoproject:ongoing' %}">Ongoing</a></li>
+                            
+                            
+                        </ul>
+                 </li>
+             
+
+            </div>
+              <div id="submenu" class="nav4">
+                <li>
+                    <a class="menu1" href="{% url 'movetoabout:about' %}">About Us</a>
+                        <ul class="sub-nav4">
+                            <li><a  class="menu1" href="{% url 'movetoabout:ourteam' %}">Our Team</a></li>
+                            <li><a class="menu1"  href="{% url 'movetoabout:ourAdvisor' %}">Our Advisor</a></li>
+                            <li><a class="menu1"  href="{% url 'movetoabout:ourPartners' %}">Our Donars & Partners</a></li>
+                        </ul>
+                 </li>
+             
+
+            </div>
+            <div class="nav5">
+                <li>
+            <a href="{% url 'movetocontact:contact' %}" id ="applied" class="nav-item nav-link menu1">Contact Us</a> 
+          </li>
+        </div>
+            </div>
+         
+        </div>
+
+   
+  </nav>
+  
+</header>
+{% include 'messages.html'%}
+</body>
+<script type="text/javascript">
+  $(window).on("load",function(){
+     $('.loader').fadeOut();
+});
+</script>
+  {% block body %}
+
+
+  {%endblock%}
+
+

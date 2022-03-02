@@ -1,0 +1,148 @@
+{%extends 'index.html'%}
+  {% block body %}
+
+  {% include 'home/carousel.html' %}
+  <br/>
+
+  <div class="col-sm-12 col-md-12">
+    <h1 class="providerDetails">NSAM</h1>
+    <p class="aimmoto">Empower youth for research and conservation </p>
+    {%load static %}
+    <hr/>
+    <div class="col-sm-12 col-md-12">
+    <div class="row">
+
+                <div id="left-contain"class="col-sm-4 col-md-4">
+                <div class="row">
+                <h3 class="margin-set" style="    margin-top: 0px;color: #4740c3">RESEARCH</h3><img style="    height: 53px;margin-left: 15px;margin-top: -26px;" src="{%static 'img/res.svg'%}"/>
+                  
+                </div>
+
+                <small style="    margin-left: -21px;    position: absolute;top: 25px;">NSAM conducts research on Biodiversity of flora and Fauna in different region of eastern Nepal
+addressing the regional level conservation.</small>
+               <br/>
+               <br/>
+                <div class="row">
+
+                <h3 style="color: #4740c3"class="margin-set">MEDIA   ADVOCACY</h3>
+                <img style="    height: 53px;margin-top: 11px;margin-left: 14px;" src="{%static 'img/media.svg'%}"/>
+                </div>
+                 <small style=" margin-left: -21px;  margin-top: -10px;position: absolute;">We address social and biodiversity issues conceptualizing sustainable development.</small>
+                 <br/>
+                 <br/>
+                 <div class="row">
+                 <h3 style="color: #4740c3" class="margin-set">EMPOWER  YOUTHS</h3><img style="    height: 53px;margin-top: 11px;margin-left: 14px;" src="{%static 'img/youth.svg'%}"/></div>
+                   <small style="     margin-left: -21px;   margin-top: -10px;position: absolute;"s>We launch programs to empower youth to understand the importance of biodiversity, help them with
+their academics &amp; earn them some skills.</small>
+                </div>
+
+                 <div id="logoholder" class="col-sm-4 col-md-4">
+                <img style="width: 82% !important"id="logo-in"src="{%static 'img/bann.png'%}" class="d-block w-100">
+                </div>
+
+                <div id="right-contain"class="col-sm-4 col-md-4">
+                  <div class="row">
+                 <h3 class="margin-set"style="color: #4740c3">WILDLIFE  TRAINING</h3>
+                 <img style=" height: 53px;margin-top: 9px;margin-left: 14px;" src="{%static 'img/slow.svg'%}"/>
+               </div>
+                 <small style="      margin-left: -21px;  margin-top: -10px;position: absolute;">We conduct advance level research courses &amp; Trainings in Eastern Nepal related to field knowledge and
+                 research data interpretation.</small>
+                 <br/>
+                  <br/>
+                 <div class="row">
+                <h3 style="color: #4740c3" class="margin-set">PUBLIC HEALTH</h3>
+                 <img style=" height: 53px;margin-top: 10px;margin-left: 14px;" src="{%static 'img/cross.svg'%}"/>
+               </div>
+                <small style="      margin-left: -21px;  margin-top: -10px;position: absolute;">We outreach general public with various health programs to improve their general health condition.</small>
+                 <br/>
+                  <br/>
+                <div class="row">
+                <h3 style="color: #4740c3" class="margin-set">PROMOTE  LIVELIHOOD</h3> 
+                <img class="promote"  src="{%static 'img/promote.svg'%}"/>
+               </div>
+                   <small style="    margin-left: -21px; margin-top: -10px;position: absolute;">We conduct trainings to formulate traditional ideas in an innovative way to promote people’s livelihood
+through eco-tourism &amp; eco-agriculture.</small>
+                </div>
+                
+    </div>
+    </div>
+    <br/>
+<div class="col-sm-12 col-md-12">
+  <br/>
+  {%if blogs%}
+  <h5>BLOGS</h5>
+  <hr/>
+  <ul class="cards5">
+    {%for k in blogs%}
+    <li class="cards_item5">
+      <div class="card5">
+        <div class="card_image5">
+          <img class="my_img" src="/media/{{k.image}}"></div>
+        <div class="card_content5">
+          <h2 class="card_title5">{{k.title |slice:":150"}}...</h2>
+          <p class="card_text5">{{k.description |slice:":150"  |safe }}...</p>
+          <a href="{% url 'movetoblog:blogsdetail' k.sno %}"class="btn5 card_btn5">Discover More</a>
+        </div>
+      </div>
+    </li>
+
+ {%endfor%}
+  </ul>
+ {%endif%}
+</div>
+<br/>
+<div class="col-sm-12 col-md-12">
+  
+  {%if news%}
+  <h5>NEWS AND EVENT</h5>
+  <hr/>
+  <ul class="cards5">
+    {%for k in news%}
+
+    <li class="cards_item5">
+      <div class="card5">
+        <div class="card_image5">
+          <img class="my_img" src="/media/{{k.picture}}"></div>
+        <div class="card_content5">
+          <h2 class="card_title5">{{k.title |slice:":150"}}</h2>
+          <p class="card_text5">{{k.description |slice:":150"  |safe }}...</p>
+
+          <a href="{% url 'movetoevent:newsdetail' k.id %}"class="btn5 card_btn5">Discover More</a>
+        </div>
+      </div>
+    </li>
+
+ {%endfor%}
+  </ul>
+ {%endif%}
+</div>
+<br/>
+<div class="col-sm-12 col-md-12">
+    <h2 class="donarsview">OUR DONARS & PARTNERS</h2>
+<hr/>
+<div class="customer-logos">
+  {%for i in donars%}
+  <div style="height: 119px;"class="slide">
+    <img src="/media/{{i.image}}">
+  </div>
+    {%endfor%} 
+
+  
+
+</div>
+
+
+    </div>
+    <br/>
+    
+</div>
+<br/>
+
+
+{%include 'footer.html'%}
+
+
+
+
+
+  {%endblock%}

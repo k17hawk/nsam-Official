@@ -1,0 +1,153 @@
+.providerDetails{
+    text-align: center;
+    font-style: Verdana;
+    font-size: 57px;
+    font-family: unset;
+    font-weight: 500;
+    font-stretch: semi-expanded;
+    font-optical-sizing: auto;
+}
+.aimmoto{
+	    text-align: center;
+    margin-top: -15px;
+    font-size: larger;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-variant-caps: all-small-caps;
+}
+
+
+#left-contain{
+	margin-top: 36px;
+    float: right;
+    right: -28px;
+}
+#right-contain{
+margin-top: 36px;
+    float: left;
+    left: 0px;
+}
+.margin-set{
+	margin-top: 27px;
+}
+.donarsview{
+	    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    font-family: auto;
+}
+.promote{
+     height: 53px;
+     margin-top: 4px;
+
+     margin-left: 14px;
+}
+   .my_img {
+  height: 300px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn5 {
+  color: #2119c3;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn5:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards5 {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item5 {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item5 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item5 {
+    width: 33.3333%;
+  }
+}
+
+.card5 {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content5 {
+  padding: 1rem;
+  
+}
+
+.card_title5 {
+  color: #150f88;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text5 {
+  color: #150f88
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+#logo-in {
+    -webkit-animation: rotation 12s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@media(max-width: 768px){
+#right-contain {
+    margin-top: 36px;
+    float: left;
+    left: 0px;
+}
+.promote{
+    height: 49px;
+    margin-top: -53px;
+    margin-left: 310px;
+
+}
+#left-contain {
+    margin-top: 36px;
+    float: right;
+    right: 0px; 
+}
+}

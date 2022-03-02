@@ -1,0 +1,512 @@
+.button-container{
+  float: right;
+}
+#navheader{
+  background-color: #005c48;
+   z-index: 1;
+
+}
+ .social-header{
+    margin-top: 65px;
+
+
+  }
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.showhas{
+
+  background-color: #005c48;
+
+  color: #fff;
+  padding: 0;
+ /* text-align: left;*/
+  margin: 0;
+  margin-left: 88px;
+  transition: max-height 0.5s;
+}
+
+    li.active, .alist:hover {
+  background-color: #3e8198;
+  color: white;
+}
+#list{
+
+    display: inline-block;
+    padding: 20px;
+    font-size: larger;
+        padding-bottom: 30px;
+}
+.droplist{
+
+  display: inline-block;
+  padding: 20px;
+    font-size: larger;
+}
+
+#alist{
+
+  text-decoration: none;
+  color: #fff;
+}
+.thelist{
+
+  text-decoration: none;
+  color: inherit;
+}
+.thelist:hover{
+  background-color: #399077;
+}
+.showman{
+    max-height: 10em;
+}
+#list:hover{
+  background-color: #399077;
+}
+
+.menu-icon{
+  width: 100%;
+  background: #005c48;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+  text-align: right;
+}
+
+
+        #social li {
+            display: inline-block;
+        }
+        #social li,
+        #social ul {
+            border: 0!important;
+            list-style: none;
+            padding-left: 0;
+            text-align: center;
+        }
+        .social-icons ul a {
+            font-size: 24px;
+            margin: 6px;
+            color: #DDD;
+        }
+        #social ul a span {
+            display: none;
+        }
+        #social li a[href*="twitter.com"] .fa:before,
+        .fa-twitter:before {
+            content: "\f099"
+        }
+        #social li a[href*="facebook.com"] .fa:before,
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a"
+        }
+        #social li a[href*="github.com"] .fa:before,
+        .fa-github:before {
+            content: "\f09b"
+        }
+        #social li a[href*="/feed"] .fa:before,
+        .fa-rss:before {
+            content: "\f09e"
+        }
+        #social li a[href*="pinterest.com"] .fa:before,
+        .fa-pinterest:before {
+            content: "\f0d2"
+        }
+        #social li a[href*="plus.google.com"] .fa:before,
+        .fa-google-plus:before {
+            content: "\f0d5"
+        }
+        #social li a[href*="linkedin.com"] .fa:before,
+        .fa-linkedin:before {
+            content: "\f0e1"
+        }
+        #social li a[href*="xing.com"] .fa:before,
+        .fa-xing:before {
+            content: "\f168"
+        }
+        #social li a[href*="youtube.com"] .fa:before,
+        .fa-youtube:before {
+            content: "\f167"
+        }
+        #social li a[href*="instagram.com"] .fa:before,
+        .fa-instagram:before {
+            content: "\f16d"
+        }
+        #social li a[href*="flickr.com"] .fa:before,
+        .fa-flickr:before {
+            content: "\f16e"
+        }
+        #social li a[href*="tumblr.com"] .fa:before,
+        .fa-tumblr:before {
+            content: "\f173"
+        }
+        #social li a[href*="dribbble.com"] .fa:before,
+        .fa-dribbble:before {
+            content: "\f17d"
+        }
+        #social li a[href*="skype:"] .fa:before,
+        #social li a[href*="skype.com"] .fa:before,
+        .fa-skype:before {
+            content: "\f17e"
+        }
+        #social li a[href*="foursquare.com"] .fa:before,
+        .fa-foursquare:before {
+            content: "\f180"
+        }
+        #social li a[href*="vimeo.com"] .fa:before,
+        .fa-vimeo-square:before {
+            content: "\f194"
+        }
+        #social li a[href*="spotify.com"] .fa:before,
+        .fa-spotify:before {
+            content: "\f1bc"
+        }
+        #social li a[href*="soundcloud.com"] .fa:before,
+        .fa-soundcloud:before {
+            content: "\f1be"
+        }
+
+        .social-icons li a[href*="facebook.com"]:hover {color: #3b5998 !important;}
+        .social-icons li a[href*="twitter.com"]:hover {color: #00aced !important;}
+        .social-icons li a[href*="plus.google.com"]:hover {color: #dd4b39 !important;}
+        .social-icons li a[href*="youtube.com"]:hover {color: #bb0000 !important;}
+        .social-icons li a[href*="github.com"]:hover {color: #4183C4 !important;}
+        .social-icons li a[href*="linkedin.com"]:hover {color: #007bb6 !important;}
+        .social-icons li a[href*="xing.com"]:hover {color: #cfdc00 !important;}
+        .social-icons li a[href*="pinterest.com"]:hover {color: #cb2027 !important;}
+        .social-icons li a[href*="rss.com"]:hover {color: #F0AD4E !important ;}
+        .social-icons li a[href*="tumblr.com"]:hover {color: #32506d !important;}
+        .social-icons li a[href*="flickr.com"]:hover {color: #ff0084 !important;}
+        .social-icons li a[href*="instagram.com"]:hover {color: #517fa4 !important;}
+        .social-icons li a[href*="dribbble.com"]:hover {color: #E56193 !important;}
+        .social-icons li a[href*="skype.com"]:hover {color: #00AFF0 !important;}
+        .social-icons li a[href*="foursquare.com"]:hover {color: #2398C9 !important;}
+        .social-icons li a[href*="soundcloud.com"]:hover {color: #F50 !important;}
+        .social-icons li a[href*="vimeo.com"]:hover {color:  #1bb6ec !important;}
+        .social-icons li a[href*="spotify.com"]:hover {color: #81b71a !important;}
+        .social-icons li a[href*="/feed"]:hover {color: #f39c12 !important;}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+      .eventholder{
+        border-bottom: 1px solid #eee;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+
+.container-fluid.scrollable {
+  height: 100%;
+
+  background: #fff;
+  padding-top:159px;
+}
+
+
+      .eventholder{
+        border-bottom: 1px solid #eee;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+
+.site-branding {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+#home-cont{
+margin-top: -171px;
+}
+
+ .dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  background-color: #2bfbcb;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+
+   /*   .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }*/
+#banner {
+background: #3e8198;
+   
+   
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+@media (max-width: 1230px) 
+{
+  .showhas{
+    max-height: 0px;
+        overflow: scroll;
+  }
+ 
+
+  .showing{
+    max-height: 20em;
+        margin-left: 28px;
+  }
+ 
+  #list{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .menu-icon{
+    display: block;
+  }
+
+#sochead
+{
+      margin-top: -44px;
+}
+
+
+  #social{
+      margin-left: 165px;
+}
+
+
+.button-container {
+  right: 93px;
+    float: right;
+   
+    position: absolute;
+    margin-top: -53px;
+}
+
+ 
+
+
+
+@media (max-width: 500px) 
+
+{
+
+  .showhas{
+    max-height: 0px;
+        overflow: scroll;
+  }
+ 
+
+  .showing{
+    max-height: 20em;
+    margin-left: 28px;
+  }
+ 
+  #list{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .menu-icon{
+    display: block;
+  }
+
+#sochead
+{
+      margin-top: -44px;
+}
+
+  #social{
+      margin-left: 57px;
+}
+
+
+.button-container {
+  right: 93px;
+    float: right;
+   
+    position: absolute;
+    margin-top: -53px;
+}
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 10rem;
+}
+#home-cont{
+margin-top: -375px;
+}
+    
+}

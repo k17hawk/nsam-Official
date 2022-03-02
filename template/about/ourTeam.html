@@ -1,0 +1,73 @@
+{%extends 'index.html'%}
+  {% block body %}
+    {%load static%}
+<style>
+   #navcontainer
+     {
+    background: url({%static 'img/blog.jpg'%}) no-repeat center center/cover;
+   }
+
+  </style>
+
+
+<div style="background-position: center top;" id="navcontainer"> 
+
+            	
+
+            	<div class="backgr-text"> 
+              
+                    <h2 class="head-part">OUR TEAM</h2> 
+                </div> 
+          
+
+    </div>
+ <div id="main-container">
+<div class="col-sm-12 col-md-12">
+<h1 class="headmy ">OUR TEAM</h1>
+  <hr/>
+{% for product, range, nSlides in allProds %}
+<div class="container">
+    
+    <h2 class="headmy">{{product.0.TypeOfMember}}</h2>
+ <div class="employee-container">
+    <div class="row">
+      {% for i in product%}
+      <div class="col-lg-4 employee-1">
+        <div class="employee">
+          <div class="employee-image">
+            <img src="/media/{{i.Image}}" class="img-fluid d-block m-auto" alt="employee-image">
+            </div>
+          <div class="employee-details">
+            <div class="employee-name">
+              <h1 class="text-center">{{i.Full_Name}}</h1>
+              </div>
+            <div class="employee-social-link">
+                <ul>
+                  {%if i.facebookId%}
+                  <li><a class="fa fa-facebook" href="{{i.facebookId}}" aria-hidden="true"></a></li>
+               {%endif%}
+               {%if i.instagramId%}
+                  <li><a class="fa fa-instagram" href="{{i.instagramId}}" aria-hidden="true"></a></li>
+                  {%endif%}
+                  {%if i.linkedIn%}
+                  <li><a class="fa fa-linkedin" href="{{i.linkedIn}}" aria-hidden="true"></a></li>
+                  {%endif%}
+              </ul>
+          </div>
+          </div>
+        </div>
+        </div>
+        {%endfor%}
+         
+
+
+</div>
+</div>
+</div>
+{%endfor%}
+</div>
+<br/>
+
+{%include "footer.html" %}
+ <div id="main-container">
+   {% endblock %}

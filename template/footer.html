@@ -1,0 +1,86 @@
+ <!-- Site footer -->
+ {% load crispy_forms_tags %}
+ {%load static%}
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <h5 >NSAM</h5>
+            <small class="text-justify">Nepal Student Association of Microbiology(NSAM) is a non-profit, non-governmental organization lead by youths. It is located at Central Campus of Technology, Dharan.  It is established  as a research thought hub in eastern Nepal. It was officially registered as an NGO in District adminstrative office, sunsari (3058/075/076) in 2019.</small>
+          </div>
+          <a href="#" id="scroll" style="display: none;"><span></span></a>
+          <div  class="col-xs-6 col-md-4">
+            <div  style="margin-left: 8px;"class="row">
+            <h5>Get our Newsletter</h5>
+           <i style="font-size: 32px;margin-left: 10px;color: #3332c3;"class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+            
+
+
+
+
+
+            <div class="container">
+              
+              <form method = 'post'>
+                {% csrf_token %}
+                {{ form | crispy }}
+          
+               
+                <button type="submit" name="save_subscribe"class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+
+              
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-4">
+            <h5>Contact</h5>
+
+            <p> <i class="fa fa-map-marker" aria-hidden="true"> Bijayapur Sadak,Dharan </i></p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> +9779814313020</p>
+
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> info@npnsam.org</p>
+          <p><i class="fa fa-clock-o" aria-hidden="true"></i> Open:10AM Close:5PM</p>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+         <a style="color: #2922ad;"href="#">NSAM</a>
+            </p>
+            <a href="https://www.instagram.com/roshikdahal/"> Developed by Kumar Dahal</a>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/cctnsam/?ref=page_internal"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="linkedin" href="http://linkedin.com/in/nsam-nepal-0413281b4"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+</footer>
+<script type="text/javascript">
+  
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+</script>

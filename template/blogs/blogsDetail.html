@@ -1,0 +1,31 @@
+{%extends 'index.html'%}
+  {% block body %}
+  <style type="text/css">
+  .mb-1{
+  	color: #1e16ad;
+  }
+ 
+  </style>
+  
+<div style="margin-top: 149px;"class="col-sm-12 col-md-12">
+
+	<h3 class="heading1 text-justify margin-set">{{details.title}}</h3>
+	
+     <img class="bd-placeholder1-img" width="200" height="250" src="/media/{{details.image}}"
+      preserveAspectRatio="xMidYMid slice" />
+       <div class="mb-1">{{details.date  |date:'M'}} {{details.date.year}}</div>
+         
+        <div class="mb-1 ">Publish By : {{details.publishBy}}</div>
+         <div class="mb-1 ">Blog By : {{details.Blog_by}}</div>
+         
+          <p class="mine-paragraph text-justify margin-set">{{details.description | safe}}</p> 
+        
+          
+        
+
+
+</div>
+
+  {%include 'footer.html'%}
+
+{% endblock %}
